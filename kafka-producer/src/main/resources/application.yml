@@ -1,0 +1,23 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    template:
+      default-topic: currency-rates
+
+
+app:
+  schedule:
+    fetch-rate: 120000  # in milliseconds (2 minutes)
+    api-url: https://api.frankfurter.dev/v1/latest? # example free API
+    currency-from: USD
+    currency-to: EUR
+
+logging:
+  level:
+    root: INFO
+    com.example.currency: DEBUG
+  file:
+    name: ${user.home}/logs/currency-app/kafka-producer.log

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <Properties>
+    <Property name="LOG_DIR">${sys:user.home}/logs/currency-app</Property>
+  </Properties>
+
+  <Appenders>
+    <RollingFile name="SparkBatchFileLogger" fileName="${LOG_DIR}/spark-submit.log"
+      filePattern="${LOG_DIR}/spark-submit-%d{yyyy-MM-dd}.log.gz">
+      <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p %c{1} - %msg%n" />
+      <Policies>
+        <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+      </Policies>
+    </RollingFile>
+
+    <Console name="SparkBatchConsoleLogger" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss} %-5p %c{1} - %msg%n"/>
+    </Console>
+  </Appenders>
+
+  <Loggers>
+    <Root level="info">
+      <AppenderRef ref="SparkBatchFileLogger"/>
+      <AppenderRef ref="SparkBatchConsoleLogger"/>
+    </Root>
+  </Loggers>
+</Configuration>

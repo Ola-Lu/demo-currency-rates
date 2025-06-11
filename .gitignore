@@ -1,0 +1,42 @@
+# Build output
+/build/
+/target/
+build/
+target/
+
+
+# Gradle cache
+.gradle/
+/.gradle/
+/*.iml
+
+### IntelliJ IDEA ###
+.idea/
+.vscode/
+*.iws
+*.iml
+*.ipr
+out/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Logs, temp
+*.log
+*.tmp
+
+# Secrets
+.env
+*.key
+*.pem
+*.crt
+
+# Local
+airflow_home/
+common/
+spark-streaming/
+/.idea/
+/spark-batch/.bsp/
+/spark-batch/.idea/
