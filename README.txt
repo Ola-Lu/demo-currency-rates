@@ -18,7 +18,7 @@ You can find a schema of the data flow in the file:
 ## Demo Video
 
 The demonstration video is available in:  
-🎥 `demo.mkv`
+🎥 [Watch the demo on YouTube](https://youtu.be/S-kcMN-0WZ8)
 
 It was recorded using **OBS Studio**, and the audio was enhanced using **Audacity**.
 
